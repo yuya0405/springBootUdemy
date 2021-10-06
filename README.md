@@ -5,4 +5,5 @@ https://www.udemy.com/course/java_spring_beginner/
 # SetUp
 ```
 export PATH=$PATH:/Users/${ホームディレクトリ}/jdk-17.jdk/Contents/Home
+export JAVA_HOME="/Users/${ホームディレクトリ}/jdk-17.jdk/Contents/Home"
 ```
