@@ -7,6 +7,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 /*
  * Add annotations here
@@ -57,13 +58,16 @@ public class InquiryController {
 	}
 
 	@PostMapping("/complete")
-	public String complete(/*Add parameters. */) {
-
-		//hands-on
-
-		//redirect
-
-		return "";
+	public String complete(@Validated InquiryForm inquiryForm,
+			BindingResult result,
+			Model model,
+			RedirectAttributes redirectAttributes) {
+		if(result.hasErrors()) {
+			model.addAttribute("title", "InquiryForm");
+			return "inquiry/form";
+		}
+		redirectAttributes.addFlashAttribute("complete", "Registered!");
+		return "redirect:/inquiry/form";
 	}
 
 }
