@@ -2,16 +2,21 @@ package com.example.demo.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.example.demo.entity.Inquiry;
 import com.example.demo.repository.InquiryDao;
 
 /*
  * Add an annotation here
  */
+@Service
 public class InquiryServiceImpl implements InquiryService {
 
 	private final InquiryDao dao;
-
+	
+	@Autowired
 	public InquiryServiceImpl(InquiryDao dao) {
 		this.dao = dao;
 	}

@@ -17,12 +17,12 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @RequestMapping("/inquiry")
 public class InquiryController {
 
-// 	private final InquiryService inquiryService;
+ 	private final InquiryService inquiryService;
 
 	//Add an annotation here
-// 	public InquiryController(InquiryService inquiryService){
-// 		this.inquiryService = inquiryService;
-// 	}
+ 	public InquiryController(InquiryService inquiryService){
+ 		this.inquiryService = inquiryService;
+ 	}
 
 	@GetMapping
 	public String index(Model model) {
