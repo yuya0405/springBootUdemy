@@ -20,11 +20,11 @@ public class WebMvcControllerAdvice {
         dataBinder.registerCustomEditor(String.class, new StringTrimmerEditor(true));
     }
     
-//	@ExceptionHandler(EmptyResultDataAccessException.class)
-//	public String handleException(EmptyResultDataAccessException e,Model model) {
-//		model.addAttribute("message", e);
-//		return "error/CustomPage";
-//	}
+	@ExceptionHandler(EmptyResultDataAccessException.class)
+	public String handleException(EmptyResultDataAccessException e,Model model) {
+		model.addAttribute("message", e);
+		return "error/CustomPage";
+	}
 	
 //	@ExceptionHandler(InquiryNotFoundException.class)
 //	public String handleException(InquiryNotFoundException e,Model model) {
