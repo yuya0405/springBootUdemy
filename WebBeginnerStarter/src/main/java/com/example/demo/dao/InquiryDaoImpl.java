@@ -39,7 +39,7 @@ public class InquiryDaoImpl implements InquiryDao {
 			inquiry.setEmail((String)result.get("email"));
 			inquiry.setContents((String)result.get("contents"));
 			inquiry.setCreated(((Timestamp)result.get("created")).toLocalDateTime());
-			list.add((inquiry));
+			list.add(inquiry);
 		}
 		return list;
 	}
